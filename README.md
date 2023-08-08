@@ -14,3 +14,7 @@ Make sure you have Go installed on your system. You can download it from [https:
    git clone https://github.com/Cero1417p/weigher
    cd truck-weight-api-project
    ```
+2. build app 
+   ```bash
+   go buil -o <name> <fileName> 
+   ```

@@ -65,11 +65,8 @@ func getWeight(w http.ResponseWriter, _ *http.Request) {
 }
 
 func getDate() string {
-	t := time.Now()
-	date := fmt.Sprintf("%d-%02d-%02dT%02d:%02d:%02d",
-		t.Year(), t.Month(), t.Day(),
-		t.Hour(), t.Minute(), t.Second())
-	return date
+	t := time.Now().Format("2006-01-02 15:04:05")
+	return t
 }
 
 type WeightScale struct {

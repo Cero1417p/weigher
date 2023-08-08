@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"net/http"
+	"strconv"
 	"time"
 )
 
@@ -21,7 +23,7 @@ func streamHandler(w http.ResponseWriter, r *http.Request) {
 	// Envía datos en un bucle cada segundo
 	for {
 		// Cambia el mensaje y el evento como desees
-		message := "Mensaje de streaming: " + time.Now().Format("2006-01-02 15:04:05")
+		message := "streaming: " + time.Now().Format("2006-01-02 15:04:05") + " - " + strconv.Itoa(rand.Intn(100)) + " t"
 		event := "actualizacion"
 
 		fmt.Fprintf(w, "event: %s\n", event)
